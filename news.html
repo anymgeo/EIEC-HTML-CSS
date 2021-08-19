@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="image/x-icon" rel="icon" href="images/icon.ico">
+    <title>გარემოსდაცვითი ინფორმაციისა და განათლების ცენტრი</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/venobox.js"></script><!--pop up-->
+	<link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+   <script src="js/lightslider.js"></script> 
+	<script>
+    	 $(document).ready(function() {
+			//$("#content-slider").lightSlider({
+//				item: 5,
+//                loop:true,
+//                keyPress:true,
+//				responsive : [
+//					{
+//						breakpoint:1024,
+//						settings: {
+//							item:3
+//						  }
+//					},
+//					{
+//						breakpoint:768,
+//						settings: {
+//							item:2
+//						  }
+//					},
+//					{
+//						breakpoint:480,
+//						settings: {
+//							item:1
+//						  }
+//					}
+//				]
+//            });	
+			$('#lightSlider').lightSlider({
+				gallery: false,
+				auto: true,
+				item: 4,
+				loop:true,
+				thumbItem: 9
+			});
+			$('#lightSlider2').lightSlider({
+				gallery: false,
+				auto: true,
+				item: 2,
+				loop:true,
+				thumbItem: 9  
+                           
+               
+			});
+            $('.iconView').venobox({				
+				numeratio  : false                               
+			});
+		});
+    </script>
+</head>
+<body>
+    <section id="wrapper"><!--id="wrapper"-->
+        <div class="fixedContainer">
+            <a href="#" class="box">
+                <img src="images/videocall.svg" alt="#">
+                <span class="hoverText">ვიდეო ზარი</span>
+            </a>
+            <a href="#" class="box">
+                <img src="images/onlineehelp.svg" alt="#">
+                <span class="hoverText">ონლაინ დახმარება</span>
+            </a>
+        </div>
+
+        <header id="headerWrapper">
+            <!--id="headerWrapper"-->
+            <div class="center">				
+              <h1>
+                  <a href="index.html" class="logoImg">
+                      <img src="images/LogoImg.svg" alt="გარემოსდაცვითი ინფორმაციისა და განათლების ცენტრი">  
+                  </a>
+                  <a href="index.html" class="logoName">
+                      <img src="images/LogoName.svg" alt="გარემოსდაცვითი ინფორმაციისა და განათლების ცენტრი"/>
+                      <!-- <img src="images/englogo.png" alt="გარემოსდაცვითი ინფორმაციისა და განათლების ცენტრი"/>  -->
+                  </a>
+              </h1>					  
+              <div class="rightHeader"> <!--class="right_header"-->
+                <ul class="socialMedia">
+                  <li><a href="#" target="_blank" class="Facebook" title="Facebook"> <img src="images/facebook.svg" alt="#"></a></li>
+                  <li><a href="#" target="_blank" class="Youtube" title="YuoTube"><img src="images/youtube.svg" alt="#"></a></li>
+                  <li><a href="#" target="_blank" class="Twitter" title="Twitter"><img src="images/twitter.svg" alt="#"></a></li>
+                  <li><a href="#" target="_blank" class="Scribd" title="Scribd"><img src="images/scribd.svg" alt="#"></a></li>
+                  <li><a href="#" target="_blank" class="Linkelin" title="Linkelin"><img src="images/linkelin.svg" alt="#"></a></li>
+                </ul>
+                <div id="sb-search" class="sb-search">
+                    <form>
+                        <input class="sb-search-input" placeholder="შეიყვანეთ საძიებო სიტყვა" type="search" name="search" id="search">
+                        <input class="sb-search-submit" type="submit" value="" >
+                        <span class="sb-icon-search"></span>
+                    </form>
+                </div>
+                    
+
+                <script src="js/classie.js"></script>
+                <script src="js/uisearch.js"></script>
+                <script>
+                    new UISearch( document.getElementById( 'sb-search' ) );
+                </script>
+					<!-- <ul class="language"> -->
+						<!-- <li><a href="#" class="currentLang">ქარ<img src="images/Group 3.png" alt="icon" id="language"></a></li> -->
+						<!-- <li><a href="#" class="cureentEng">ENG</a></li> -->
+        	<!-- </ul> -->
+                 <!-- <a href="#" class="engLang">ENG</a> -->
+              <form class="langform" action="#">              
+                <select class="language rev-select-box">
+                      <option value="hide">ქარ</option>
+                      <option value="geo">ქარ</option> 
+                      <option value="eng">eNG</option>
+                    
+                  </select>
+                  
+              </form>                        
+				     <!-- start js language -->
+            <script>(function($) {
+                        $.fn.RevSelectBox = function() {
+                      
+                          this.each(function() {
+                            var $this = $(this),
+                              numberOfOptions = $(this).children('option').length;
+                      
+                      
+                            $this.addClass('select-hidden');
+                      
+                            if( !$this.parent().hasClass('rev-select') ){
+                              $this.wrap('<div class="rev-select"></div>');
+                            }
+                            $this.closest('.rev-select').find('.select-styled').remove();
+                            $this.closest('.rev-select').find('.select-options').remove();
+                      
+                            
+                            $this.after('<div class="select-styled"></div>');
+                      
+                            var $styledSelect = $this.next('div.select-styled');
+                            if( $this.find('option:selected') ){
+                              $styledSelect.text($this.find('option:selected').text());
+                            }
+                            else{
+                              $styledSelect.text($this.children('option').eq(0).text());
+                            }
+                      
+                            var $list = $('<ul />', {
+                              'class': 'select-options'
+                            }).insertAfter($styledSelect);
+                      
+                            for (var i = 0; i < numberOfOptions; i++) {
+                              $('<li />', {
+                                text: $this.children('option').eq(i).text(),
+                                rel: $this.children('option').eq(i).val()
+                              }).appendTo($list);
+                            }
+                      
+                            var $listItems = $list.children('li');
+                      
+                            $styledSelect.click(function(e) {
+                              e.stopPropagation();
+                              $('div.select-styled.active').not(this).each(function() {
+                                $(this).removeClass('active').next('ul.select-options').hide();
+                              });
+                              $(this).toggleClass('active').next('ul.select-options').toggle();
+                            });
+                      
+                            $listItems.click(function(e) {
+                              e.stopPropagation();
+                              $styledSelect.text($(this).text()).removeClass('active');
+                              $this.val($(this).attr('rel')).trigger('change');
+                              $list.hide();
+                              //console.log($this.val());
+                            });
+                      
+                            $this.change(function(e) {
+                              // e.stopPropagation();
+                              $styledSelect.text( $this.find('option:selected').text() );
+                            });
+                      
+                            $(document).click(function() {
+                              $styledSelect.removeClass('active');
+                              $list.hide();
+                            });
+                      
+                          });
+                      
+                        };
+                      
+                      }(jQuery));
+                      
+                      jQuery(".rev-select-box").RevSelectBox();
+                      jQuery( "select" ).RevSelectBox();
+                      </script>
+                      
+                    <!-- end js  -->
+                   
+				        </div><!--End of class="right_header"-->	                	
+			      </div><!--End of class="center"-->	  
+          <nav class="mainMenu">
+            <span class="burger">
+                <img src="./images/menu.svg" alt="#">
+            </span>
+                        <!--class="mainMenu"-->
+                        <ul class="menuBurger">
+                            <li>
+                                <!-- li-ზე გაითვალისწინე classActive შიდებზე-->
+                                <a href="#" >ჩვენ შესახებ </a>
+                                <ul>
+                                    <li><a href="aboutcentre.html"> ცენტრის შესახებ</a></li>
+                                    <li><a href="Structure.html">სტრუქტურა</a></li>
+                                    <li><a href="Director.html">დირექტორი</a></li>
+                                    <li><a href="deputyDirector.html">დირექტორის მოადგილეები</a></li>
+                                    <li><a href="subdivisionsHeads.html">სამსახურის უფროსები</a></li>
+                                    <li><a href="subdivision.html">სამსახურები</a></li>
+                                    <li><a href="centreAccounts.html">ცენტრის წლიური ანგარიშები</a></li>
+                                    <li><a href="Publications.html">პუბლიკაციები</a></li>
+                                    <li><a href="currentprojects.html">პროექტები</a></li>
+                                    <li><a href="Vacancy.html">ვაკანსიები</a></li>
+                                </ul> 
+                            </li>
+                            <li class="active">
+                                <a href="#">საზოგადოებსთან ურთიერთობა </a>
+                                <ul>
+                                    <li><a href="News.html">სიახლეები</a></li>
+                                    <li><a href="Announcements.html">განცხადებები</a></li>
+                                    <li><a href="VideoGallery.html">ვიდეო გალერეა</a></li>
+                                    <li><a href="faq.html">ხშირად დასმული კითხვები</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"> საჯარო ინფორმაცია</a>
+                                <ul>
+                                    <li><a href="PublicInformation.html">საჯარო ინფორმაცია</a></li>
+                                    <li><a href="PublicInformationPratic.html">საჯარო ინფორმაციის ხელმისაწვდომობის უზრუნველყოფისა და ინფორმაციის პროაქტიულ გამოქვეყენებაზე პასუხისმგებელი პირი</a></li>
+                                    <li><a href="RequestPublicInformation.html">მოითხოვე საჯარო ინფორმაცია</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">დოკუმენტები </a>
+                                <ul>
+                                    <li><a href="NationalReports.html">ეროვნული მოხსენებები</a></li>
+                                    <li><a href="AnnualAccounts">წლიური ანგარიშები</a></li>
+                                    <li><a href="ActionPlans.html">სამოქმედო გეგმები</a></li>
+                                    <li><a href="Multilateralagreements.html">მრავალმხრივი ხელშეკრულებები</a></li>
+                                    <li><a href="BilateralAgreements.html">ორმხრივი ხელშეკრულებები</a></li>
+                                    <li><a href="Newsletters.html">საინფორმაციო ბიულეტინები</a></li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">თემები </a>
+                              <ul>
+                                    <li><a href="EnvironmentalEducation.html">გარემოსდაცვითი განათლება</a></li>
+                                    <li><a href="AgrarianEducation.html">აგრარული განათლება</a></li>
+                                    <li><a href="Biodiversity.html">ბიომრავალფეროვნება</a></li>
+                                    <li><a href="ClimateChange.html">კლიმატის ცვლილება</a></li>
+                                    <li><a href="land.html">მიწა</a></li>
+                                    <li><a href="air.html">ჰაერი</a></li>
+                                    <li><a href="water.html">წყალი</a></li>
+                                    <li><a href="Waste.html">ნარჩენები</a></li>
+                                    <li><a href="ProtectedTerritories.html">დაცული ტერიტორიები</a></li>
+                                    <li><a href="RadiationSafety.html">რადიაციული უსაფრთხოება</a></li>
+                                    <li><a href="EnviromentalGovernance.html">გარემოსდაცვითი მმართველობა</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"> სერვისები </a>
+                                <ul>
+                                    <li><a href="CertificateCourse.html">სასერტიფიკათო კურსები</a></li>
+                                    <li><a href="PublicHearings.html">საჯარო განხილვები</a></li>
+                                    <li><a href="TrainingCourse.html">სასწავლო კურსები</a></li>
+                                    <li><a href="LectureSeminares.html">ლექცია-სემინარები</a></li>
+                                    <li><a href="EnvironmentalAgrarionCompetitions.html">გარემოსდაცვითი და აგრარული კონკურსები</a></li>
+                                    <li><a href="Discusions.html">დისკუსიები</a></li>
+                                    <li><a href="ExpertBase.html">ექსპერტთა ბაზა</a></li>
+                                </ul> 
+                            </li>
+                            <li><a href="Organisations.html"> ორგანიზაციები </a></li>
+                            <li>
+                                <a href="#">ბმულები</a>
+                                <ul>
+                                    <li><a href="MinistryAgencies.html">სამინისტრო უწყებები</a></li>
+                                    <li><a href="Charity.html">ქველმოქმედება</a></li>
+                                    <li><a href="DonorOrganisations.html">დონორი ორგანიზაციები</a></li>
+                                    <li><a href="InformationSystems.html">საინფორმაციო სისტემები</a></li>
+                                </ul> 
+                            </li>
+                            <li>
+                                <a href="#"> კონტაქტი</a>
+                                <ul>
+                                    <li><a href="Centre.html">ცენტრი</a></li>
+                                    <li><a href="Services.html">სამსახურები</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav> <!--  End of id="mainMenu" -->
+                <script type="text/javascript">
+					$("nav div").click(function () {
+						$("nav ul").slideToggle();
+						$("nav ul ul").css("display", "none");
+					});
+
+					$(".bars").click(function () {
+						var clicks = $(this).data('clicks');
+						if (clicks) {
+							$("#nav-icon1").removeClass("open");
+							console.log(clicks);
+						} else {
+							$("#nav-icon1").addClass("open");
+							console.log(clicks);
+						}
+						$(this).data("clicks", !clicks);
+							
+					});
+					$("nav ul li").click(function() {
+						$("nav ul ul").slideUp();
+						$(this).find('ul').slideToggle();
+					});
+
+					if($(window).width() > 1065) {
+						$("nav ul").removeAttr('style');
+
+						$("nav > ul > li").click(function() {
+							$("nav ul ul").removeAttr('style');
+						});
+						$("nav > ul > li").hover(function() {
+							$("nav ul ul").removeAttr('style');
+						});
+					}
+					$(window).resize(function() {
+						if($(window).width() > 1065) {
+							$("nav ul").removeAttr('style');
+							$("nav > ul > li").click(function() {
+								$("nav ul ul").removeAttr('style');
+							});
+							$("nav > ul > li").hover(function() {
+								$("nav ul ul").removeAttr('style');
+							});
+						}
+					});
+					
+				</script>
+
+
+             </header> <!--End of id="headerWrapper"-->   
+
+             
+ 
+         <section id="contentWrapper" class="innerContent">
+            <!-- id="contentWrapper"  --> 
+            <div class="center">
+                <div class="leftContent">
+                    <!--class="leftContent"  -->
+                    <h2><a href="news.html">სიახლეები</a></h2>
+                    <div class="cardBox"> <!--START CARDBOX-->
+                        <article class="news">
+                            <!--class="news" -->
+                            <a href="simpleNews.html">
+                                <!--simpleNews-->
+    
+                                <div class="imgBlock">
+                                    <img src="images/1.jpg" alt="#">
+                                    <span>იხილეთ სრულად</span>
+                                </div>
+                            <div class="newsText" >
+                                <time>3 მარტი, 2021</time>
+                                <h2>აკვაკულტურისთვის გამოყოფილი ზონების და მართვის გეგმის საჯარო განხილვა</h2>
+                            </div>
+                            </a><!--End of simpleNews" -->
+                        </article><!--End of class="news" -->
+                        <article class="news">
+                            <!--class="news" -->
+                            <a href="simpleNews.html">
+                                <!--simpleNews-->
+    
+                                <div class="imgBlock">
+                                    <img src="images/1.jpg" alt="#">
+                                    <span>იხილეთ სრულად</span>
+                                </div>
+                            <div class="newsText" >
+                                <time>3 მარტი, 2021</time>
+                                <h2>აკვაკულტურისთვის გამოყოფილი ზონების და მართვის გეგმის საჯარო განხილვა</h2>
+                            </div>
+                            </a><!--End of simpleNews" -->
+                        </article><!--End of class="news" -->
+                        <article class="news">
+                            <!--class="news" -->
+                            <a href="simpleNews.html">
+                                <!--simpleNews-->
+    
+                                <div class="imgBlock">
+                                    <img src="images/1.jpg" alt="#">
+                                    <span>იხილეთ სრულად</span>
+                                </div>
+                            <div class="newsText" >
+                                <time>3 მარტი, 2021</time>
+                                <h2>აკვაკულტურისთვის გამოყოფილი ზონების და მართვის გეგმის საჯარო განხილვა</h2>
+                            </div>
+                            </a><!--End of simpleNews" -->
+                        </article><!--End of class="news" -->
+                        <article class="news">
+                            <!--class="news" -->
+                            <a href="simpleNews.html">
+                                <!--simpleNews-->
+    
+                                <div class="imgBlock">
+                                    <img src="images/1.jpg" alt="#">
+                                    <span>იხილეთ სრულად</span>
+                                </div>
+                            <div class="newsText" >
+                                <time>3 მარტი, 2021</time>
+                                <h2>აკვაკულტურისთვის გამოყოფილი ზონების და მართვის გეგმის საჯარო განხილვა</h2>
+                            </div>
+                            </a><!--End of simpleNews" -->
+                        </article><!--End of class="news" -->
+                        <article class="news">
+                            <!--class="news" -->
+                            <a href="simpleNews.html">
+                                <!--simpleNews-->
+    
+                                <div class="imgBlock">
+                                    <img src="images/1.jpg" alt="#">
+                                    <span>იხილეთ სრულად</span>
+                                </div>
+                            <div class="newsText" >
+                                <time>3 მარტი, 2021</time>
+                                <h2>აკვაკულტურისთვის გამოყოფილი ზონების და მართვის გეგმის საჯარო განხილვა</h2>
+                            </div>
+                            </a><!--End of simpleNews" -->
+                        </article><!--End of class="news" -->
+                        <article class="news">
+                            <!--class="news" -->
+                            <a href="simpleNews.html">
+                                <!--simpleNews-->
+    
+                                <div class="imgBlock">
+                                    <img src="images/1.jpg" alt="#">
+                                    <span>იხილეთ სრულად</span>
+                                </div>
+                            <div class="newsText" >
+                                <time>3 მარტი, 2021</time>
+                                <h2>აკვაკულტურისთვის გამოყოფილი ზონების და მართვის გეგმის საჯარო განხილვა</h2>
+                            </div>
+                            </a><!--End of simpleNews" -->
+                        </article><!--End of class="news" -->
+                        <article class="news">
+                            <!--class="news" -->
+                            <a href="simpleNews.html">
+                                <!--simpleNews-->
+    
+                                <div class="imgBlock">
+                                    <img src="images/1.jpg" alt="#">
+                                    <span>იხილეთ სრულად</span>
+                                </div>
+                            <div class="newsText" >
+                                <time>3 მარტი, 2021</time>
+                                <h2>აკვაკულტურისთვის გამოყოფილი ზონების და მართვის გეგმის საჯარო განხილვა</h2>
+                            </div>
+                            </a><!--End of simpleNews" -->
+                        </article><!--End of class="news" -->
+                        <article class="news">
+                            <!--class="news" -->
+                            <a href="simpleNews.html">
+                                <!--simpleNews-->
+    
+                                <div class="imgBlock">
+                                    <img src="images/1.jpg" alt="#">
+                                    <span>იხილეთ სრულად</span>
+                                </div>
+                            <div class="newsText" >
+                                <time>3 მარტი, 2021</time>
+                                <h2>აკვაკულტურისთვის გამოყოფილი ზონების და მართვის გეგმის საჯარო განხილვა</h2>
+                            </div>
+                            </a><!--End of simpleNews" -->
+                        </article><!--End of class="news" -->
+                        <article class="news">
+                            <!--class="news" -->
+                            <a href="simpleNews.html">
+                                <!--simpleNews-->
+    
+                                <div class="imgBlock">
+                                    <img src="images/1.jpg" alt="#">
+                                    <span>იხილეთ სრულად</span>
+                                </div>
+                            <div class="newsText" >
+                                <time>3 მარტი, 2021</time>
+                                <h2>აკვაკულტურისთვის გამოყოფილი ზონების და მართვის გეგმის საჯარო განხილვა</h2>
+                            </div>
+                            </a><!--End of simpleNews" -->
+                        </article><!--End of class="news" -->
+                        <article class="news">
+                            <!--class="news" -->
+                            <a href="simpleNews.html">
+                                <!--simpleNews-->
+    
+                                <div class="imgBlock">
+                                    <img src="images/1.jpg" alt="#">
+                                    <span>იხილეთ სრულად</span>
+                                </div>
+                            <div class="newsText" >
+                                <time>3 მარტი, 2021</time>
+                                <h2>აკვაკულტურისთვის გამოყოფილი ზონების და მართვის გეგმის საჯარო განხილვა</h2>
+                            </div>
+                            </a><!--End of simpleNews" -->
+                        </article><!--End of class="news" -->
+                     
+                    </div> <!--CARD BOX END--> 
+                      <ul class="pager">
+                            <li class="prevPage"><a href="#"></a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li class="curPage"><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="nextPage"><a href="#"></a></li>
+                        </ul>
+                </div> <!-- End of class="leftContent" -->
+                <div class="leftContent rightContent">
+                    <!--class="rightContent"  -->
+                    <nav class="subMenu">
+                        <ul>
+                            <li class="activePage"><a href="news.html">სიახლეები</a></li>
+                            <li><a href="Announcements.html">განცხადებები</a></li>
+                            <li><a href="VideoGallery.html">ვიდეო გალერეა</a></li>
+                            <li><a href="faq.html">ხშირად დასმული კითხვები</a></li>
+                        </ul>
+                </nav>
+                     <div class="calendar">
+                        <h2><a href="PublicHearings.html">საჯარო განხილვები</a></h2>
+
+
+                        <h3 class="">  აქ იქნება ნიუსების არქივის კალენდარი</h3>
+                    </div> 
+                    
+                </div> <!-- End of class="rightContent" --> 
+             </div><!-- End of class="center" -->
+        </section> <!-- End of id="contentWrapper"  -->
+        <footer id="footerWrapper" class="innerFooter"><!-- id="footerWrapper"  -->
+         <div class="center">
+                <div class="leftFooter"> <!-- class="leftFooter" -->
+                <h2><a href="governance.html">სამინისტროს უწყებები</a></h2>
+                <ul id="lightSlider">
+                    <li data-thumb="imaged/lepl1.png">
+                        <a href="#" target="_blank">
+                            <img src="images/rdautskeba.png" alt="#"/>
+                        </a>							
+                    </li>
+                    <li data-thumb="images/lepl2.png">
+                        <a href="#" target="_blank">
+                            <img src="images/rdautskeba.png" alt="#"/>
+                        </a>							
+                    </li>
+                    <li data-thumb="images/lepl3.png">
+                        <a href="#" target="_blank">
+                            <img src="images/tutskeba.png" alt="#"/>
+                        </a>							
+                    </li>
+                    <li data-thumb="imaged/lepl1.png">
+                        <a href="#" target="_blank">
+                            <img src="images/rdautskeba.png" alt="#"/>
+                        </a>							
+                    </li>
+                    <li data-thumb="images/lepl2.png">
+                        <a href="#" target="_blank">
+                            <img src="images/tutskeba.png" alt="#"/>
+                        </a>							
+                    </li>
+                    <li data-thumb="images/lepl3.png">
+                        <a href="#" target="_blank">
+                            <img src="images/tutskeba.png" alt="#"/>
+                        </a>							
+                    </li>
+                    <li data-thumb="imaged/lepl1.png">
+                        <a href="#" target="_blank">
+                            <img src="images/rdautskeba.png" alt="#"/>
+                        </a>							
+                    </li>
+                    <li data-thumb="images/lepl2.png">
+                        <a href="#" target="_blank">
+                            <img src="images/tutskeba.png" alt="#"/>
+                        </a>							
+                    </li>
+                    <li data-thumb="images/lepl3.png">
+                        <a href="#" target="_blank">
+                            <img src="images/tutskeba.png" alt="#"/>
+                        </a>							
+                    </li>
+                </ul>
+            </div>  <!-- End of class="leftFooter" -->
+                <div class="leftFooter rightFooter"><!-- class="rightFooter" -->
+                    <h2><a href="DonorOrganisation.html">დონორი ორგანიზაციები</a></h2> 
+                    <ul id="lightSlider2">
+						<li data-thumb="images/charity.png">
+							<a href="#" target="_blank">
+								<img src="images/usdadonnor.png" alt="#"/>
+							</a>							
+						</li>
+                        <li data-thumb="images/charity.png">
+							<a href="#" target="_blank">
+								<img src="images/donnor.png" alt="#"/>
+							</a>							
+						</li>
+                        <li data-thumb="images/charity.png">
+							<a href="#" target="_blank">
+								<img src="images/usdadonnor.png" alt="#"/>
+							</a>							
+						</li>
+                        <li data-thumb="images/charity.png">
+							<a href="#" target="_blank">
+								<img src="images/donnor.png" alt="#"/>
+							</a>							
+						</li>
+                        <li data-thumb="images/charity.png">
+							<a href="#" target="_blank">
+								<img src="images/usdadonnor.png" alt="#"/>
+							</a>							
+						</li>
+                        <li data-thumb="images/charity.png">
+							<a href="#" target="_blank">
+								<img src="images/donnor.png" alt="#"/>
+							</a>							
+						</li>
+                        
+					</ul>
+            </div>         
+           <!-- <script src="js/lightslider.js"></script>-->
+				      
+            </div> <!-- End of class="rightFooter" -->
+  
+            <section class="bottomFooter">
+                <!-- class="bottomFooter"  -->
+                <div class="center">   
+                      <ul class="contactInformation"> <!--გადაწყვიტე როგორ გააკეთებ იკონებს-->
+                            <li>                                                         
+                                <div  class="icon location" ></div>
+                                <span>მარშალ გელოვანის 6, 0159, საქართველო, თბილისი.</span> 
+                            </li>
+                            <li> 
+                                <div  class="icon mail" ></div>
+                                <a href="mailto:info@eiec.gov.ge">info@eiec.gov.ge</a>
+                            </li>
+                            <li>
+                                <div class="icon tel"></div>
+                                <a href="tel:1501">1501</a>
+                            </li>
+                        </ul>
+                        <p>
+    
+                            &copy;  ყველა უფლება დაცული, სსიპ გარემისდაცვითი ინფორმაციისა და განათლების ცენტრი
+                        </p>
+                    </div>                 
+            </section><!-- End of class="bottomFooter"  -->
+        </footer> <!-- End of id="footerWrapper"  -->
+    </section><!--End of id="wrapper"-->
+</body>
+</html>
+    
+
